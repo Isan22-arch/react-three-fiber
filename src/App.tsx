@@ -5,6 +5,7 @@ import './App.css';
 import GeoBox from './components/GeoBox';
 import GeoText from './components/GeoText';
 import GeoTexture from './components/GeoTexture';
+import GeoEnv from './components/GeoEnv';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         />
         {/* <GeoBox /> */}
         {/* <GeoText /> */}
-        <GeoTexture />
+        {/* <GeoTexture /> */}
+        <GeoEnv />
         <OrbitControls
         // enableZoom={false}
         // maxPolarAngle={Math.PI / 2}
