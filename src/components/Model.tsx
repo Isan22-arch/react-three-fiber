@@ -22,6 +22,7 @@ const Model = () => {
         object={fbx}
         ref={fbxRef}
         scale={scale}
+        position={[3, 3, 3]}
       />
     </>
   );

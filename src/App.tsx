@@ -21,7 +21,7 @@ function App() {
         {/* <GeoBox /> */}
         {/* <GeoText /> */}
         {/* <GeoTexture /> */}
-        {/* <GeoEnv /> */}
+        <GeoEnv />
         <Model />
         <OrbitControls
         // enableZoom={false}

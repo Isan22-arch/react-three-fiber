@@ -1,4 +1,9 @@
-import { Environment, Sphere, useEnvironment } from '@react-three/drei';
+import {
+  CubeCamera,
+  Environment,
+  Sphere,
+  useEnvironment,
+} from '@react-three/drei';
 import React from 'react';
 
 const GeoEnv = () => {
@@ -12,8 +17,25 @@ const GeoEnv = () => {
         map={envMap}
         background
       />
-      <Sphere>
-        <meshStandardMaterial />
+      <CubeCamera>
+        {/*@ts-ignore*/}
+        {(texture) => (
+          <>
+            <Environment map={texture} />
+            <Sphere>
+              <meshStandardMaterial
+                metalness={1}
+                roughness={0}
+              />
+            </Sphere>
+          </>
+        )}
+      </CubeCamera>
+      <Sphere
+        position={[1.5, 1.5, 1.5]}
+        scale={0.5}
+      >
+        <meshNormalMaterial />
       </Sphere>
     </>
   );
